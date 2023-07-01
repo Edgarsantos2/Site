@@ -1,0 +1,56 @@
+{% extends "navbar.html"%}
+{% block title %}Registo{% endblock %}
+{% block conteudo %}
+
+<div class="registo ">
+  <div class="contact">
+    <div class="row no-gutters">
+      <div class="col-lg-5 contact-info__wrapper p-4 order-lg-2 ">
+        <h1 class="tituloregisto1">Bem vindo!</h1>
+        <h2 class="tituloregisto2 mb-5">Bento Seguros</h2>
+
+        <div>
+          Aqui pode encontrar os seguros que se adequam a si, <br> com os melhores mediadores que contam com mais de
+          15
+          anos
+          de experiência.
+        </div>
+        <div class="slogan mt-3">
+          "Vá à Bento Seguros para uma vida mais segura."
+        </div>
+        <div>
+          <img class="imgregisto ms-3" src="{{url_for('static', filename='bento_seguros_1png.png')}}" />
+        </div>
+
+
+      </div>
+
+
+
+      <div class="col-lg-7 contact-form__wrapper d-flex align-items-center justify-content-center">
+        <form id="regi" action="{{ url_for('auth.registo_form') }}" method="POST">
+          <div class="row">
+            <div class="col-sm-6 mb-3 p-4 order-lg-1">
+
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-control caixa" name="email" type="email" id="email">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="password1">Password</label>
+                <input class="form-control caixa" name="password" type="pass1" id="password">
+              </div>
+              <input class="btn btn-danger w-100 mt-4" type="submit" value="Registar" id="registoBd">
+            </div>
+          </div>
+        </form>
+        <div class="alerta z-5"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

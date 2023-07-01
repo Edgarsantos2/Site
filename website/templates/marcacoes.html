@@ -1,0 +1,79 @@
+{% extends "navbar.html"%}
+{% block title %}Marcações{% endblock %}
+{% block conteudo %}
+
+<div class="card  pb-4">
+    <form class="contact-form form-validate" novalidate="novalidate" id="marcacoes"
+        action="{{ url_for('auth.marcacoes_form') }}" method="POST">
+        <div class="card-body-marcacoes ">
+            <h2>Marcações</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label class="required-field" for="nome">Insira o seu Nome</label>
+                            <input type="text" class="form-control" id="nome_m" name="nome_m" placeholder="Nome">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label class="required-field" for="email">Indique o seu Email</label>
+                            <input type="text" class="form-control" id="email_m" name="email_m"
+                                placeholder="exemplo@gmail.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label class="form-label">Indique o Mediador</label>
+                        <select class="form-select" id="mediador_m" name="mediador_m">
+                            <option value="0" selected disabled>Mediador</option>
+                            <option value="Isabel Rodrigues">Isabel Rodrigues</option>
+                            <option value="Marco Rodrigues">Marco Rodrigues</option>
+                            <option value="Sandra Noronha">Sandra Noronha</option>
+                            <option value="Lídia Ferreira">Lídia Ferreira</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label class="form-label">Selecione um Assunto</label>
+                        <select class="form-select" id="assunto_m" name="assunto_m">
+                            <option value="0" selected disabled>Assunto</option>
+                            <option value="Automovel">Automovel</option>
+                            <option value="Mota">Mota</option>
+                            <option value="Saúde">Saúde</option>
+                            <option value="Pets">Pets</option>
+                            <option value="Acidentes Pessoais">Acidentes Pessoais</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label class="required-field" for="email">Indique a data</label>
+                            <input type="datetime-local" class="form-control" id="data_m" name="data_m">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label class="required-field" for="nome">Insira o Motivo</label>
+                            <input type="text" class="form-control" id="motivo_m" name="motivo_m"
+                                placeholder="Fazer Seguro">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" name="submit" class="btn btn-red">Marcar</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

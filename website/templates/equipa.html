@@ -1,0 +1,78 @@
+{% extends "navbar.html"%}
+{% block title %}Registo{% endblock %}
+{% block conteudo %}
+
+
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container_equipa pb-5 ">
+    <section id="team" class="white-bg padding-top-bottom">
+		<div class="container_equipa ">
+			<h2 class="white section-title text-center titulo ">Equipa</h2>
+			<h3 class="  section-description text-center espaco" style="color: white;">Muito mais do que uma simples seguradora, a Bento Seguros tem como missão salvaguardar as pessoas e os seus bens!</h3>
+			<div class="row trabalhador" style="background-color:#f5aaad;  border-radius: 10px;">
+				<div class="col-sm-3 col-sm-offset-1 foto-trabalhador  fade-right in">
+					<img class="img-responsive img-center img-thumbnail img-circle" src="{{url_for('static', filename='isabel.jpg')}}" alt="">
+					<h4>Isabel Rodrigues</h4>
+					<p class="titulo">CEO</p>
+				</div>
+				<div class="col-sm-7">
+					<div class="texto">
+						<p>Com mais de 20 anos de experiência, a Isabel está sempre atenta às necessidades dos clientes, tendo como objetivo o desenvolvimento próspero do legado familiar que assumiu.</p>
+						<ul class="mail">
+							<li><a href="{{url_for('views.contactos')}}"><i class="fa fa-envelope fa-fw"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row trabalhador" style="background-color:#f5aaad;  border-radius: 10px;" >
+				<div class="col-sm-3 col-sm-pull-7 foto-trabalhador">
+					<img class="img-responsive img-center img-thumbnail img-circle" src="{{url_for('static', filename='marco.jpg')}}" alt="">
+					<h4>Marco Rodrigues</h4>
+					<p class="titulo">Director Comercial</p>
+				</div>
+				<div class="col-sm-7 col-sm-push-2">
+					<div class="texto">
+						<p>Com mais de 15 anos de experiência, sendo os últimos 4 na família Bento Seguros, foi aqui que encontrou as ferramentas necessárias para desenvolver a parte comercial através de uma formação continua e certificada, colocando todo o seu conhecimento ao serviço dos clientes. O Marco tem a sorte de fazer o que mais gosta e é muito feliz com a sua família.</p>
+						<ul class="mail">
+							<li><a href="{{url_for('views.contactos')}}"><i class="fa fa-envelope fa-fw"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row trabalhador" style="background-color:#f5aaad;  border-radius: 10px;">
+				<div class="col-sm-3 col-sm-offset-1 foto-trabalhador">
+					<img class="img-responsive img-center img-thumbnail img-circle" src="{{url_for('static', filename='sandra.jpg')}}" alt="">
+					<h4>Sandra Noronha</h4>
+					<p class="titulo">Gestora de Clientes</p>
+				</div>
+				<div class="col-sm-7   ">
+					<div class="texto">
+						<p>Desde 2014 a navegar na agitação constante da atividade seguradora, em que a maré em 2022 me trouxe até esta casa, a Bento Seguros, onde impera a serenidade, a amizade, a alegria e o profissionalismo, onde a busca da satisfação dos nossos clientes é uma constante. É a nossa determinação e a nossa união que, de uma forma sustentável, nos faz querer ir sempre mais além.</p>
+						<ul class="mail">
+							<li><a href="{{url_for('views.contactos')}}"><i class="fa fa-envelope fa-fw"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            <div class="row trabalhador" style="background-color:#f5aaad;  border-radius: 10px;">
+				<div class="col-sm-3 col-sm-offset-1 foto-trabalhador">
+					<img class="img-responsive img-center img-thumbnail img-circle" src="{{url_for('static', filename='lidia.jpg')}}" alt="">
+					<h4>Lídia Ferreira</h4>
+					<p class="titulo">Gestora de Sinistros</p>
+				</div>
+				<div class="col-sm-7   ">
+					<div class="texto">
+						<p>Desde 1999 que estou na área seguradora, o que me ajudou a encontrar o equilíbrio tanto familiar como profissional,
+                            no entanto foi na Bento Seguros que encontrei o ambiente perfeito para desempenhar as minhas funções da melhor forma. Para tal, muito contribui o contato com o público e a excelente relação existente entre a nossa equipa.</p>
+						<ul class="mail">
+							<li><a href="{{url_for('views.contactos')}}"><i class="fa fa-envelope fa-fw"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>    
+</div>                   
+{% endblock %}

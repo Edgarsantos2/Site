@@ -1,0 +1,90 @@
+{% extends "navbar.html"%}
+{% block title %}Contactos{% endblock %}
+{% block conteudo %}
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<div class="container ">
+    <div class="contact__wrapper shadow-lg mt-n9">
+        <div class="row no-gutters">
+            <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2 red">
+                <h3 class="color--white mb-5">Entre em Contacto</h3>
+
+                <ul class="contact-info__list list-style--none position-relative z-index-101">
+                    <li class="mb-4 pl-4">
+                        <span class="position-absolute"><i class="fas fa-envelope"></i></span> mrbentoseguros@gmail.com
+                    </li>
+                    <li class="mb-4 pl-4">
+                        <span class="position-absolute"><i class="fas fa-phone"></i></span> (+351) 916 292 168
+                    </li>
+                    <li class="mb-4 pl-4">
+                        <span class="position-absolute"><i class="fas fa-map-marker-alt"></i></span> Rua Fausto Pereira
+                        Almeida Bl D 6V
+                        <br> 3080-195 Figueira da Foz
+                        <div class="mt-3">
+                            <a href="https://www.google.com/maps/place/Bento+Seguros,+Lda/@40.1550452,-8.8604738,214m/data=!3m1!1e3!4m6!3m5!1s0xd2237bf91267133:0xf1e78b7951695083!8m2!3d40.1548761!4d-8.8597362!16s%2Fg%2F11bwc0zbhj?hl=pt-PT&entry=ttu"
+                                target="_blank" class="text-link link--right-icon text-white">Direção<i
+                                    class="link__icon fa fa-directions"></i></a>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
+                <form class="contact-form form-validate" novalidate="novalidate" id="contactos"
+                    action="{{ url_for('auth.contactos_form') }}" method="POST">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label for="apelido">Ultimo Nome</label>
+                                <input type="text" class="form-control" id="apelido" name="apelido"
+                                    placeholder="Apelido">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email"
+                                    placeholder="exemplo@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 mb-3">
+                            <div class="form-group">
+                                <label for="numero">Numero Telemovel</label>
+                                <input type="tel" class="form-control" id="numero" name="numero"
+                                    placeholder="(+351) 911 111 111">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 mb-3">
+                            <div class="form-group">
+                                <label class="required-field" for="mensagem">Em que podemos ajudar?</label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="4"
+                                    placeholder="ola, queria saber como..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 mb-3">
+                            <button type="submit" name="submit" class="btn btn-red">Submeter</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

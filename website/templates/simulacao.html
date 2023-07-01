@@ -1,0 +1,115 @@
+{% extends "navbar.html"%}
+{% block title %}Simulação{% endblock %}
+{% block conteudo %}
+
+
+
+<div class="card mb-4">
+  <div class="card-body">
+    <h2>Simulação</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <label class="form-label">Marca do Carro</label>
+          <select id="marca" class="form-select">
+            <option value="0" selected=""></option>
+            <option value="1">Audi</option>
+            <option value="2">Bmw</option>
+            <option value="3">Opel</option>
+            <option value="4">Ford</option>
+            <option value="5">VW</option>
+            <option value="6">Mercedes</option>
+            <option value="7">Volvo</option>
+            <option value="8">Nissan</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <label class="form-label">Cilindrada</label>
+          <select id="cilindrada" class="form-select">
+            <option value="0" selected=""></option>
+            <option value="1">500-1000</option>
+            <option value="2">1001-1500</option>
+            <option value="3">1501-2000</option>
+            <option value="4">2001-2500</option>
+            <option value="5">2501-3000</option>
+            <option value="6">3001-3500</option>
+            <option value="7">3501-4000</option>
+            <option value="8">4001-4500</option>
+            <option value="9">4501-5000</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <label class="form-label">Anos do Carro</label>
+          <select id="anosCarro" class="form-select">
+            <option value="0" selected=""></option>
+            <option value="1">1980-1990</option>
+            <option value="2">1991-2000</option>
+            <option value="3">2001-2010</option>
+            <option value="4">2011-2020</option>
+            <option value="5">2021-2030</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <label class="form-label">Anos de Carta</label>
+          <select id="anosCarta" class="form-select">
+            <option value="0" selected=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10/+</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    {% if session['logged_in'] %}
+    <button id="simularBtn" type="submit" name="submit" class="btn btn-red">Simular</button>
+    <p id="resultado" class="text-center" style="font-size: 20px;"></p>
+    {% endif %}
+  </div>
+</div>
+  <script>
+    
+    function simular() {
+      
+      var marca = document.getElementById("marca").value;
+      var cilindrada = document.getElementById("cilindrada").value;
+      var anosCarro = document.getElementById("anosCarro").value;
+      var anosCarta = document.getElementById("anosCarta").value;
+  
+      
+      var valorMarca = 30;
+      var valoresCilindrada = [0,20, 20, 20, 30, 30, 30, 40, 40, 40];
+      var valoresAnosCarro = [0,30, 30, 50, 50, 50];
+      var valoresAnosCarta = [0,70, 70, 70, 60, 60, 60, 60, 45, 45, 45];
+  
+      
+      var resultado =
+        valorMarca +
+        valoresCilindrada[cilindrada] +
+        valoresAnosCarro[anosCarro] +
+        valoresAnosCarta[anosCarta];
+  
+      
+      var resultadoElement = document.getElementById("resultado");
+      resultadoElement.innerHTML = "O Valor anual do seguro é de " + resultado + "€";
+    }
+  
+    
+    var simularBtn = document.getElementById("simularBtn");
+    simularBtn.addEventListener("click", simular);
+  </script>
+{% endblock %}

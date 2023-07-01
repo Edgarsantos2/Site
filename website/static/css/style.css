@@ -1,0 +1,404 @@
+/* Background*/
+body {
+    background-color: #fd3e46;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+    overflow-x: hidden;
+
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    margin-top: 20px;
+}
+.login h1{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+
+.login h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.login form {
+    font-size: 20px;
+}
+
+.login form .form-group {
+    margin-bottom: 12px;
+}
+
+.login input {
+    font-size: 20px;
+    margin-top: 15px;
+}
+/* Registo */
+
+.registo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    margin-top: 75px;
+
+}
+
+.tituloregisto1 {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.tituloregisto2 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+.slogan{
+    font-style: italic;
+    font-weight: bold;
+}
+.imgregisto {
+    width: 75%;
+
+}
+.col-sm-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .caixa {
+    width: 250px; /* tamanho caixas de texto */
+  }
+
+
+/*equipa*/
+
+.espaco {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.titulo{
+    color: white;    
+}
+.trabalhador .mail li a{
+    display:inline-block;
+    padding:0;
+    min-width:40px;
+    height:40px;
+    font-size:21px;
+    line-height:40px;
+    color:red;
+    border-radius:5px;
+    box-shadow:0 3px 0 0 transparent;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+
+.trabalhador .texto {
+    margin:20px 0 0 20px;
+    position:relative;
+    padding:30px;
+    padding-left:100px;
+    background:#f5f5f5;
+    border-radius:10px;
+    box-shadow:5px 5px 0 rgba(0,0,0,0.08);
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+
+.trabalhador {
+    margin-bottom:30px;
+}
+
+.foto-trabalhador{
+    text-align:center;
+}
+
+.foto-trabalhador h4{
+    font-size:21px;
+    margin:10px 0;
+}
+
+.foto-trabalhador .titulo{
+    font-size:18px;
+    margin:10px 0;
+    color:white;
+}
+
+
+
+.trabalhador:hover .texto{
+    background: white;
+    color: black;
+}
+   
+.trabalhador .texto:after {
+    display:block;
+    content:"";
+    position:absolute;
+    left:-18px;
+    top:30px;
+    width:0px;
+    height:0px;
+    background:transparent;
+    border:20px solid transparent;
+    border-left:20px solid #f5f5f5;
+    box-shadow:-3px 0 0 rgba(0,0,0,0.08);
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    -webkit-transition:border-left-color .3s ease-out;
+    transition:border-left-color .3s ease-out;
+}
+
+.trabalhador:hover .texto:after {
+    border-left-color: white;
+} 
+.trabalhador .texto:before {
+    display:block;
+    content:"\201D";
+    position:absolute;
+    left:20px;
+    top:50px;
+    font-size:120px;
+    font-weight:800;
+    line-height:60px;
+    font-family:Arial;
+    color: red;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+
+.trabalhador .mail t {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.trabalhador .mail li {
+    display:inline;
+    text-align:center;
+    margin:0 2px;
+}
+
+.trabalhador .mail li a:hover{
+    background:red;
+    color:white;
+    box-shadow:0 3px 0 0 rgba(0,0,0,0.05);
+}
+
+/*contactos*/
+
+
+
+.contact__wrapper {
+    background-color: #fff; /* Define a cor de fundo da caixa como branco */
+    border-radius: .625rem;
+}
+.gradient-brand-color {
+    background-image: -webkit-linear-gradient(0deg, red 0%, #6470ef 100%);
+    color: #fff;
+}
+.contact-info__wrapper {
+    overflow: hidden;
+    border-radius: .625rem .625rem 0 0
+}
+
+@media (min-width: 1024px) {
+    .contact-info__wrapper {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !
+    }
+}
+.contact-info__list span.position-absolute {
+    left: 0
+}
+.z-index-101 {
+    z-index: 101;
+}
+.list-style--none {
+    list-style: none;
+}
+.contact__wrapper {
+    background-color: white;
+    border-radius: 0 0 .625rem .625rem
+}
+
+@media (min-width: 1024px) {
+    .contact__wrapper {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+@media (min-width: 1024px) {
+    .contact-form__wrapper {
+        padding: 5rem 
+    }
+}
+.btn-red {
+    background-color: red;
+    color: white;
+    /* cor do botão dos contactos  */
+}
+.container {
+    padding-top: 100px; /* dar espaço entre a navbar e o container */   
+}
+
+/*simulação*/
+
+.card-body-simulacao {
+    padding: 20px;
+  }
+
+  .card-body-simulacao h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+
+
+/*seguros*/
+
+.titulo_seguros {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+a.card-seg {
+    text-decoration: none;
+}
+
+.card-seg {
+    height: 250px;
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+}
+.card-seg {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    font-family:Arial;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: .25rem;
+}
+
+.icon { /*fazer o sombreado*/
+    -webkit-box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09) ;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto ;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto ;
+}
+.rounded-circle {
+    border-radius: 50% ;
+}
+.bg-white {
+    background-color: #fff ;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto ;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto ;
+}
+.d-block {
+    display: block ;
+}
+img, figure {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.card-text {
+    padding-top: 12px;
+    color:black;
+}
+
+.text-sm {
+    font-size: 14px ;
+}
+p, .p {
+    margin: 0 0 16px;
+}
+
+.card-titulo  {
+    color: red;
+    margin: 0;
+    font-family:Arial;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.pt-1, .py-1 {
+    padding-top: .25rem ;
+}
+
+.head-icon{
+    margin-top:18px;
+    color:black;
+}
+
+/* Marcaçoes*/
+
+.card-body-marcacoes {
+    padding: 20px;
+  }
+
+  .card-body-marcacoes h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+/* Area Cliente */
+
+
+
